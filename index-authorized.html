@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="robots" content="noindex" />
@@ -12,13 +12,44 @@
       rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .icon-gradient {
+        background: linear-gradient(135deg, #e43d12 0%, #d6536d 100%);
+      }
+      .btn-signup {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0.5rem 1rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: white;
+        background: linear-gradient(135deg, #e43d12 0%, #d6536d 100%);
+        border: none;
+        border-radius: 0.375rem;
+        transition: all 0.3s ease;
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      }
+      .btn-signup:hover {
+        background: linear-gradient(135deg, #d6536d 0%, #e43d12 100%);
+        transform: translateY(-2px);
+      }
+      .btn-signup.sidebar-btn {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    </style>
   </head>
   <body class="font-sans bg-gray-50">
     <div
@@ -33,44 +64,13 @@
       <div class="p-4">
         <div class="p-2 flex items-center justify-between mb-8">
           <a href="index.html"
-            ><div class="flex items-center gap-2 group">
-              <div class="w-8 h-8 relative flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-globe w-8 h-8 text-indigo-500 group-hover:rotate-12 transition-transform duration-300"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path
-                    d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
-                  ></path>
-                  <path d="M2 12h20"></path>
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-mouse-pointer2 w-4 h-4 text-amber-500 absolute -bottom-1 -right-1"
-                >
-                  <path
-                    d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"
-                  ></path>
-                </svg>
+            ><div class="flex items-center gap-1 group">
+              <div
+                class="bg-white border border-gray-300 rounded px-2 py-1 shadow-sm font-mono font-bold text-gray-700 text-xs group-hover:bg-gray-50 transition-colors duration-300"
+              >
+                CTRL
               </div>
-              <span class="text-xl font-bold gradient-text">Ctrlchampions</span>
+              <span class="text-lg font-bold gradient-text">champions</span>
             </div></a
           >
           <a id="closeSidebar" class="text-gray-500 hover:text-gray-700">
@@ -129,8 +129,6 @@
                 <path d="m9 18 6-6-6-6"></path>
               </svg>
             </a>
-
-
 
             <a
               href="games.html"
@@ -268,10 +266,7 @@
                 </svg>
                 Login
               </a>
-              <a
-                href="signup.html"
-                class="mt-3 text-white inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full justify-start gap-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700"
-              >
+              <a href="signup.html" class="btn-signup sidebar-btn mt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -290,7 +285,10 @@
                 Sign Up
               </a>
             </div>
-            <div style="display: none;" class="w-full relative inline-block text-left group pt-5">
+            <div
+              style="display: none"
+              class="w-full relative inline-block text-left group pt-5"
+            >
               <a
                 class="trigger2 cursor-pointer flex items-center justify-between px-4 py-2 border rounded text-sm font-medium text-gray-700 border-indigo-200 hover:bg-gray-100"
               >
@@ -315,7 +313,8 @@
                 <a
                   href="/?delcookie=1"
                   class="cursor-pointer block px-4 py-2 text-sm text-gray-700"
-                  >Log out</a>
+                  >Log out</a
+                >
               </div>
             </div>
           </div>
@@ -349,48 +348,18 @@
                 <line x1="4" x2="20" y1="6" y2="6"></line>
                 <line x1="4" x2="20" y1="18" y2="18"></line></svg></a
             ><a href="index.html"
-              ><div class="flex items-center gap-2 group">
-                <div class="w-8 h-8 relative flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-globe w-8 h-8 text-indigo-500 group-hover:rotate-12 transition-transform duration-300"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path
-                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
-                    ></path>
-                    <path d="M2 12h20"></path></svg>
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-mouse-pointer2 w-4 h-4 text-amber-500 absolute -bottom-1 -right-1"
-                  >
-                    <path
-                      d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"
-                    ></path>
-                  </svg>
+              ><div class="flex items-center gap-1 group">
+                <div class="bg-white border border-gray-300 rounded px-2 py-1 shadow-sm font-mono font-bold text-gray-700 text-xs group-hover:bg-gray-50 transition-colors duration-300">
+                  CTRL
                 </div>
-                <span class="text-xl font-bold gradient-text">Ctrlchampions</span>
+                <span class="text-lg font-bold gradient-text">champions</span>
               </div></a
             >
           </div>
-
+          
           <div class="navbar-nav flex items-center gap-4">
+        
+
             <a
               href="contactus.html"
               class="justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-9 rounded-md px-3 flex items-center gap-2 hover:bg-white/20 transition-all duration-300"
@@ -433,7 +402,6 @@
             </a>
 
             <div
-              style="display: none"
               class="menu-button hidden md:flex items-center gap-2 ml-2 pl-2 border-l border-white/20"
             >
               <a
@@ -442,17 +410,14 @@
               >
                 Login</a
               >
-              <a
-                href="signup.html"
-                class="text-white inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 luxury-shadow"
-              >
+              <a href="signup.html" class="btn-signup">
                 Sign Up
               </a>
             </div>
 
-            <div class="relative inline-block text-left group">
+            <div style="display: none;" class="relative inline-block text-left group">
               <a
-                class="trigger1 cursor-pointer flex items-center px-4 py-2 border rounded text-sm font-medium text-gray-700 border-indigo-200 bg-white"
+                class="trigger1 cursor-pointer flex items-center px-4 py-2 border rounded text-sm font-medium text-gray-700 border-indigo-200 hover:bg-gray-100"
               >
                 <span class="ml-2 user_name">user_name</span>
                 <svg
@@ -470,13 +435,12 @@
                 </svg>
               </a>
               <div
-                class="dropdown1 absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-150 z-10 bg-white"
+                class="dropdown1 absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-150 z-10"
               >
                 <a
                   href="/?delcookie=1"
                   class="cursor-pointer block px-4 py-2 text-sm text-gray-700"
-                  >Log out</a
-                >
+                  >Log out</a>
               </div>
             </div>
           </div>
@@ -496,19 +460,34 @@
                 <div class="hero-badge mb-4">
                   <i class="fas fa-arrow-pointer text-indigo-700"></i>
                   <span class="text-sm font-medium text-indigo-700"
-                    >Fun Is Just a Click Away</span
+                    >Ctrl Your Fun</span
                   >
                 </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                  Enter <span class="font-bold gradient-text">Ctrlchampions</span>
+                <h1
+                  class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+                >
+                  Enter
+                  <span class="font-bold gradient-text">Ctrlchampions</span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                  The ultimate digital playground for nonstop gaming fun. Your world, your play, your escape.
+                <p
+                  class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed"
+                >
+                  Step into the ultimate HTML5 playground.
                 </p>
                 <a href="games.html" class="hero-cta">
-                  Explore Our Games
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  Start Playing
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </a>
               </div>
@@ -519,8 +498,13 @@
                     <i class="fas fa-bolt"></i>
                     <span>Instant Access</span>
                   </div>
-                  <h3 class="text-xl md:text-2xl font-bold mb-1.5">No downloads</h3>
-                  <p class="text-indigo-50 text-xs md:text-sm">Launch HTML5 games in seconds, on any device.</p>
+                  <h3 class="text-xl md:text-xl font-bold mb-1.5">
+                    No Downloads, Full Control
+                  </h3>
+                  <p class="text-indigo-50 text-xs md:text-sm">
+                    Launch games in seconds on any device. Quick to start, easy
+                    to play.
+                  </p>
                 </div>
                 <div class="hero-card hero-card--light">
                   <div class="hero-card-corner hero-card-corner--dark"></div>
@@ -528,8 +512,12 @@
                     <i class="fas fa-sync-alt"></i>
                     <span>Always Fresh</span>
                   </div>
-                  <h3 class="text-lg md:text-xl font-bold mb-1.5">Curated library</h3>
-                  <p class="text-gray-600 text-xs md:text-sm">New titles and genres, weekly rotation.</p>
+                  <h3 class="text-lg md:text-xl font-bold mb-1.5">
+                    Curated library
+                  </h3>
+                  <p class="text-gray-600 text-xs md:text-sm">
+                    New titles and genres added periodically.
+                  </p>
                 </div>
                 <div class="hero-card hero-card--accent">
                   <div class="hero-card-corner hero-card-corner--amber"></div>
@@ -537,8 +525,13 @@
                     <i class="fas fa-clock"></i>
                     <span>Play Smart</span>
                   </div>
-                  <h3 class="text-lg md:text-xl font-bold mb-1.5">Pick-up sessions</h3>
-                  <p class="text-amber-900 text-xs md:text-sm">Quick wins for five minutes or fifty.</p>
+                  <h3 class="text-lg md:text-xl font-bold mb-1.5">
+                    Pick-Up, Power-Up, Play
+                  </h3>
+                  <p class="text-amber-900 text-xs md:text-sm">
+                    From five-minute wins to hour-long sessions, every game fits
+                    your schedule.
+                  </p>
                 </div>
               </div>
             </div>
@@ -552,14 +545,8 @@
                 <span class="play-pulse"></span>
                 Start Playing
               </div>
-              <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-4">
-                Start Playing Now
-              </h2>
-              <p class="text-lg text-gray-600 max-w-2xl">
-                Whether you've got five minutes or an hour, there's always a game waiting for you.
-              </p>
             </div>
-            
+
             <div class="play-portal">
               <div class="portal-feature">
                 <div class="portal-feature-glow"></div>
@@ -568,14 +555,14 @@
                 </div>
                 <h3 class="text-3xl font-bold mb-3">Instant Play</h3>
                 <p class="text-indigo-100 text-lg mb-6 leading-relaxed">
-                  Jump straight into your favorite browser games, anytime. No downloads, no waiting вЂ” just pure gaming fun.
+                  Jump straight into your favorite browser games, anytime.
                 </p>
                 <a href="games.html" class="portal-cta">
                   <span>Browse Games</span>
                   <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
-              
+
               <div class="portal-stack">
                 <div class="portal-mini portal-mini--amber">
                   <div class="mini-badge">
@@ -583,17 +570,21 @@
                   </div>
                   <div>
                     <h4 class="text-xl font-bold mb-2">Casual Fun</h4>
-                    <p class="text-gray-600 text-sm">Hundreds of HTML5 games with zero downloads</p>
+                    <p class="text-gray-600 text-sm">
+                      Hundreds of HTML5 games with zero downloads
+                    </p>
                   </div>
                 </div>
-                
+
                 <div class="portal-mini portal-mini--light">
                   <div class="mini-badge mini-badge--indigo">
                     <i class="fas fa-clock"></i>
                   </div>
                   <div>
                     <h4 class="text-xl font-bold mb-2">Play Anytime</h4>
-                    <p class="text-gray-600 text-sm">Quick sessions or long gaming marathons</p>
+                    <p class="text-gray-600 text-sm">
+                      Quick sessions or long gaming marathons
+                    </p>
                   </div>
                 </div>
               </div>
@@ -601,208 +592,632 @@
           </div>
         </section>
 
-        <section id="genres" class="py-5 game-section" data-gsap="genres-section" data-particles-initialized="true">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 mb-5" data-gsap="section-header">
-              <div class="play-label mb-4">
-                <span class="play-pulse"></span>
-                Browse Games
+        <section
+          id="genres"
+          class="py-5 game-section"
+          data-gsap="genres-section"
+          data-particles-initialized="true"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 mb-5" data-gsap="section-header">
+                <div class="play-label mb-4">
+                  <span class="play-pulse"></span>
+                  Browse Games
+                </div>
+                <h2
+                  class="display-5 fw-bold text-white"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    opacity: 1;
+                    transform: translate(0px, 0px);
+                  "
+                >
+                  Explore by <span class="gradient-text">Genre</span>
+                </h2>
+                <p
+                  class="lead text-white"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    opacity: 1;
+                    transform: translate(0px, 0px);
+                    margin-top: 0.5rem;
+                    max-width: 600px;
+                  "
+                >
+                  Discover your next favorite game across diverse categories
+                </p>
               </div>
-              <h2 class="display-5 fw-bold text-white" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                Explore by <span class="gradient-text">Genre</span>
-              </h2>
-              <p class="lead text-white" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px); margin-top: 0.5rem; max-width: 600px;">
-                Discover your next favorite game across diverse categories
-              </p>
+            </div>
+            <div class="row g-4" data-gsap="genres-grid">
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Family" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-heart"
+                      >
+                        <path
+                          d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Family Time</h5>
+                    <p class="genre-description">
+                      Fun games suitable for all ages to play together
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Puzzle" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-brain"
+                      >
+                        <path
+                          d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+                        ></path>
+                        <path
+                          d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+                        ></path>
+                        <path
+                          d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+                        ></path>
+                        <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                        <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                        <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                        <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                        <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                        <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Brain Games</h5>
+                    <p class="genre-description">
+                      Brain teasers and logic games to challenge your mind
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Endless" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-sparkles"
+                      >
+                        <path
+                          d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+                        ></path>
+                        <path d="M20 3v4"></path>
+                        <path d="M22 5h-4"></path>
+                        <path d="M4 17v2"></path>
+                        <path d="M5 18H3"></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Endless Mode</h5>
+                    <p class="genre-description">
+                      Games that keep going with increasing difficulty
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Action" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-zap"
+                      >
+                        <path
+                          d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Action Zone</h5>
+                    <p class="genre-description">
+                      Fast-paced games requiring quick reflexes
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Sports" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-target"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Game On</h5>
+                    <p class="genre-description">
+                      Virtual sports and athletic competitions
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Strategy" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-trophy"
+                      >
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path
+                          d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+                        ></path>
+                        <path
+                          d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+                        ></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Strategy Lab</h5>
+                    <p class="genre-description">
+                      Think ahead and plan your moves to win
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Educational" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-puzzle"
+                      >
+                        <path
+                          d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Smart Play</h5>
+                    <p class="genre-description">
+                      Learn while having fun with these games
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Adventure" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-map"
+                      >
+                        <path
+                          d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"
+                        ></path>
+                        <path d="M15 5.764v15"></path>
+                        <path d="M9 3.236v15"></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Adventure Quest</h5>
+                    <p class="genre-description">
+                      Explore new worlds and epic quests
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Platformer" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up"
+                      >
+                        <path d="m5 12 7-7 7 7"></path>
+                        <path d="M12 19V5"></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Jump &amp; Run</h5>
+                    <p class="genre-description">
+                      Jump and run through challenging levels
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Match%203" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-layers"
+                      >
+                        <path
+                          d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"
+                        ></path>
+                        <path
+                          d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"
+                        ></path>
+                        <path
+                          d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Match Madness</h5>
+                    <p class="genre-description">
+                      Match three or more items to clear them
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Board" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-dice6"
+                      >
+                        <rect
+                          width="18"
+                          height="18"
+                          x="3"
+                          y="3"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <path d="M16 8h.01"></path>
+                        <path d="M16 12h.01"></path>
+                        <path d="M16 16h.01"></path>
+                        <path d="M8 8h.01"></path>
+                        <path d="M8 12h.01"></path>
+                        <path d="M8 16h.01"></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Tabletop Classics</h5>
+                    <p class="genre-description">
+                      Digital versions of classic board games
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Multiplayer" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-hand-heart"
+                      >
+                        <path
+                          d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"
+                        ></path>
+                        <path
+                          d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"
+                        ></path>
+                        <path d="m2 15 6 6"></path>
+                        <path
+                          d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Multiplayer Arena</h5>
+                    <p class="genre-description">
+                      Play with friends and other players online
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Memory" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-route"
+                      >
+                        <circle cx="6" cy="19" r="3"></circle>
+                        <path
+                          d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"
+                        ></path>
+                        <circle cx="18" cy="5" r="3"></circle>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Memory Challenge</h5>
+                    <p class="genre-description">
+                      Test and improve your memory skills
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="/?page=games&amp;cat=Word" class="genre-link">
+                  <div
+                    class="genre-card"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      opacity: 1;
+                      transform: translate(0px, 0px);
+                    "
+                  >
+                    <div class="genre-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-type"
+                      >
+                        <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                        <line x1="9" x2="15" y1="20" y2="20"></line>
+                        <line x1="12" x2="12" y1="4" y2="20"></line>
+                      </svg>
+                    </div>
+                    <h5 class="genre-title">Word</h5>
+                    <p class="genre-description">
+                      Word puzzles and vocabulary games
+                    </p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="row g-4" data-gsap="genres-grid">
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Family" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-home"></i>
-                  </div>
-                  <h5 class="genre-title">Family Time</h5>
-                  <p class="genre-description">
-                    Fun games suitable for all ages to play together
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Puzzle" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-puzzle-piece"></i>
-                  </div>
-                  <h5 class="genre-title">Brain Games</h5>
-                  <p class="genre-description">
-                    Brain teasers and logic games to challenge your mind
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Endless" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-infinity"></i>
-                  </div>
-                  <h5 class="genre-title">Endless Mode</h5>
-                  <p class="genre-description">
-                    Games that keep going with increasing difficulty
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Action" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-fist-raised"></i>
-                  </div>
-                  <h5 class="genre-title">Action Zone</h5>
-                  <p class="genre-description">
-                    Fast-paced games requiring quick reflexes
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Sports" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-football-ball"></i>
-                  </div>
-                  <h5 class="genre-title">Game On</h5>
-                  <p class="genre-description">
-                    Virtual sports and athletic competitions
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Strategy" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-chess"></i>
-                  </div>
-                  <h5 class="genre-title">Strategy Lab</h5>
-                  <p class="genre-description">
-                    Think ahead and plan your moves to win
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Educational" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                  </div>
-                  <h5 class="genre-title">Smart Play</h5>
-                  <p class="genre-description">
-                    Learn while having fun with these games
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Adventure" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-map"></i>
-                  </div>
-                  <h5 class="genre-title">Adventure Quest</h5>
-                  <p class="genre-description">
-                    Explore new worlds and epic quests
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Platformer" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-running"></i>
-                  </div>
-                  <h5 class="genre-title">Jump &amp; Run</h5>
-                  <p class="genre-description">
-                    Jump and run through challenging levels
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Match%203" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-gem"></i>
-                  </div>
-                  <h5 class="genre-title">Match Madness</h5>
-                  <p class="genre-description">
-                    Match three or more items to clear them
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Board" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-dice"></i>
-                  </div>
-                  <h5 class="genre-title">Tabletop Classics</h5>
-                  <p class="genre-description">
-                    Digital versions of classic board games
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Multiplayer" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <h5 class="genre-title">Multiplayer Arena</h5>
-                  <p class="genre-description">
-                    Play with friends and other players online
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Memory" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-brain"></i>
-                  </div>
-                  <h5 class="genre-title">Memory Challenge</h5>
-                  <p class="genre-description">
-                    Test and improve your memory skills
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="/?page=games&amp;cat=Word" class="genre-link">
-                <div class="genre-card" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                  <div class="genre-icon">
-                    <i class="fas fa-font"></i>
-                  </div>
-                  <h5 class="genre-title">Word</h5>
-                  <p class="genre-description">
-                    Word puzzles and vocabulary games
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      <canvas width="1256" height="1259" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas></section>
+          <canvas
+            width="1256"
+            height="1259"
+            style="
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+              z-index: 1;
+            "
+          ></canvas>
+        </section>
 
         <section class="py-20 bg-gradient-to-r from-gray-50 to-indigo-50">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -820,7 +1235,9 @@
                 <div class="advantage-index">01</div>
                 <div>
                   <h3 class="text-xl font-bold mb-2">Variety</h3>
-                  <p class="text-gray-600">From puzzles to racing, discover games for every mood.</p>
+                  <p class="text-gray-600">
+                    From puzzles to racing, discover games for every mood.
+                  </p>
                 </div>
               </div>
               <div class="advantage-pill">
@@ -828,16 +1245,20 @@
                 <div>
                   <h3 class="text-xl font-bold mb-2">Curated Game Library</h3>
                   <p class="text-gray-600">
-                    A hand-picked selection of high-quality HTML5 games for instant, no-fuss entertainment.
+                    A hand-picked selection of high-quality HTML5 games for
+                    instant, no-fuss entertainment.
                   </p>
                 </div>
               </div>
               <div class="advantage-pill">
                 <div class="advantage-index">03</div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">Safe &amp; Secure Platform</h3>
+                  <h3 class="text-xl font-bold mb-2">
+                    Safe &amp; Secure Platform
+                  </h3>
                   <p class="text-gray-600">
-                    Your data and privacy are our top priority. Play worry-free with a trusted and private platform.
+                    Your data and privacy are our top priority. Play worry-free
+                    with a trusted and private platform.
                   </p>
                 </div>
               </div>
@@ -847,7 +1268,9 @@
 
         <section class="py-20 bg-white">
           <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+            <div
+              class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12"
+            >
               <div>
                 <div class="play-label mb-4">
                   <span class="play-pulse"></span>
@@ -897,7 +1320,7 @@
                   </a>
                 </div>
               </div>
-              
+
               <div class="price-frame price-frame--premium">
                 <div class="price-edge price-edge--glow"></div>
                 <div class="price-badge-popular">POPULAR</div>
@@ -912,7 +1335,9 @@
                       <span class="price-value">38.95</span>
                       <span class="price-period">/month</span>
                     </div>
-                    <p class="text-sm text-indigo-100 mt-2">Includes 3-day free trial</p>
+                    <p class="text-sm text-indigo-100 mt-2">
+                      Includes 3-day free trial
+                    </p>
                   </div>
                   <div class="price-divider"></div>
                   <div class="price-features price-features--light">
@@ -948,20 +1373,42 @@
             <div class="cta-banner">
               <div>
                 <div class="cta-flag mb-5">Ready to Play</div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Begin Your Adventure?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                  Ready to Begin Your Adventure?
+                </h2>
                 <p class="text-lg text-gray-200">
-                  Join the Ctrlchampions community today and unlock your gaming potential.
+                  Join the Ctrlchampions community today and unlock your gaming
+                  potential.
                 </p>
               </div>
-              <div class="flex flex-col sm:flex-column w-100 items-center sm:items-center gap-4">
+              <div
+                class="flex flex-col sm:flex-column w-100 items-center sm:items-center gap-4"
+              >
                 <a href="signup.html" class="hero-cta">
                   Sign Up for Free
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 5 7 7-7 7" />
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 12h14"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m12 5 7 7-7 7"
+                    />
                   </svg>
                 </a>
-                <span class="text-sm text-center text-gray-300">Cancel anytime.<br>Start with the free trial.</span>
+                <span class="text-sm text-center text-gray-300"
+                  >Cancel anytime.<br />Start with the free trial.</span
+                >
               </div>
             </div>
           </div>
@@ -976,35 +1423,17 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div class="col-span-1 md:col-span-2">
             <div class="flex items-center gap-3 mb-4">
-              <div
-                class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-globe w-6 h-6 text-white"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path
-                    d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
-                  ></path>
-                  <path d="M2 12h20"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold">Ctrlchampions</h3>
-                <p class="text-sm text-gray-400">Your Digital Playground</p>
+              <div class="flex items-center gap-1">
+                <div class="bg-white border border-gray-300 rounded px-2 py-1 shadow-sm font-mono font-bold text-gray-700 text-xs">
+                  CTRL
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold gradient-text">champions</h3>
+                </div>
               </div>
             </div>
             <p class="text-gray-300 mb-6 max-w-md">
-              Your premier destination for HTML5 gaming. Just one click and you’re playing — anytime, anywhere, for fun, for relaxation, for you.
+              Your personal playground of HTML5 games. Click, play, enjoy.
             </p>
             <div class="flex items-center gap-4 mb-6">
               <div class="flex items-center gap-2 text-sm text-gray-400">
@@ -1118,6 +1547,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>    
+    <script src="js/script.js"></script>
   </body>
 </html>

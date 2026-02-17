@@ -12,6 +12,35 @@
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .icon-gradient {
+        background: linear-gradient(135deg, #E43D12 0%, #D6536D 100%);
+      }
+      .btn-signup {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0.5rem 1rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: white;
+        background: linear-gradient(135deg, #E43D12 0%, #D6536D 100%);
+        border: none;
+        border-radius: 0.375rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      }
+      .btn-signup:hover {
+        background: linear-gradient(135deg, #D6536D 0%, #E43D12 100%);
+        transform: translateY(-2px);
+      }
+      .btn-signup.sidebar-btn {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    </style>
   </head>
   <body class="font-sans bg-gray-50">
     <div
@@ -261,10 +290,7 @@
                 </svg>
                 Login
               </a>
-              <a
-                href="signup.html"
-                class="mt-3 text-white inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full justify-start gap-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700"
-              >
+              <a href="signup.html" class="btn-signup sidebar-btn mt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -342,43 +368,11 @@
                 <line x1="4" x2="20" y1="6" y2="6"></line>
                 <line x1="4" x2="20" y1="18" y2="18"></line></svg></a
             ><a href="index.html"
-              ><div class="flex items-center gap-2 group">
-                <div class="w-8 h-8 relative flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-globe w-8 h-8 text-indigo-500 group-hover:rotate-12 transition-transform duration-300"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path
-                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
-                    ></path>
-                    <path d="M2 12h20"></path></svg
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-mouse-pointer2 w-4 h-4 text-amber-500 absolute -bottom-1 -right-1"
-                  >
-                    <path
-                      d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"
-                    ></path>
-                  </svg>
+              ><div class="flex items-center gap-1 group">
+                <div class="bg-white border border-gray-300 rounded px-2 py-1 shadow-sm font-mono font-bold text-gray-700 text-xs group-hover:bg-gray-50 transition-colors duration-300">
+                  CTRL
                 </div>
-                <span class="text-xl font-bold gradient-text">Ctrlchampions</span>
+                <span class="text-lg font-bold gradient-text">champions</span>
               </div></a
             >
           </div>
@@ -403,8 +397,8 @@
                 class="lucide lucide-mail w-4 h-4"
               >
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-              ><span class="hidden sm:inline">Contact Us</span></a
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                <span class="hidden sm:inline">Contact Us</span></a
             >
             <a
               href="cancel.html"
@@ -423,8 +417,8 @@
                 class="lucide lucide-credit-card w-4 h-4"
               >
                 <rect width="20" height="14" x="2" y="5" rx="2"></rect>
-                <line x1="2" x2="22" y1="10" y2="10"></line></svg
-              ><span class="hidden sm:inline">Cancel Subscription</span>
+                <line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                <span class="hidden sm:inline">Cancel Subscription</span>
             </a>
 
             <div
@@ -436,10 +430,7 @@
               >
                 Login</a
               >
-              <a
-                href="signup.html"
-                class="text-white inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 luxury-shadow"
-              >
+              <a href="signup.html" class="btn-signup">
                 Sign Up
               </a>
             </div>
@@ -472,8 +463,6 @@
                   >Log out</a>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -603,35 +592,17 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div class="col-span-1 md:col-span-2">
             <div class="flex items-center gap-3 mb-4">
-              <div
-                class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-globe w-6 h-6 text-white"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path
-                    d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
-                  ></path>
-                  <path d="M2 12h20"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold">Ctrlchampions</h3>
-                <p class="text-sm text-gray-400">Your Digital Playground</p>
+              <div class="flex items-center gap-1">
+                <div class="bg-white border border-gray-300 rounded px-2 py-1 shadow-sm font-mono font-bold text-gray-700 text-xs">
+                  CTRL
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold gradient-text">champions</h3>
+                </div>
               </div>
             </div>
             <p class="text-gray-300 mb-6 max-w-md">
-              Your premier destination for HTML5 gaming. Just one click and you’re playing — anytime, anywhere, for fun, for relaxation, for you.
+              Your personal playground of HTML5 games. Click, play, enjoy.
             </p>
             <div class="flex items-center gap-4 mb-6">
               <div class="flex items-center gap-2 text-sm text-gray-400">
