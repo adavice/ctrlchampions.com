@@ -41,6 +41,11 @@
   --font-display: "Space Grotesk", "Segoe UI", "Trebuchet MS", sans-serif;
   --shadow-luxury: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Green gradient variables */
+  --green-start: #0cec10; /* emerald-600 */
+  --green-end: #0d906d; /* emerald-900 */
+  --green-gradient: linear-gradient(90deg, var(--green-start) 0%, var(--green-end) 100%);
+  --green-gradient-hover: linear-gradient(90deg, #0de587 0%, #098b75 100%);
 }
 
 a {
@@ -90,6 +95,16 @@ h4,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Reusable green gradient class */
+.green-gradient {
+  background: var(--green-gradient) !important;
+  color: #ffffff !important;
+}
+.green-gradient:hover {
+  background: var(--green-gradient-hover) !important;
+  transform: translateY(-1px);
 }
 
 .hero-stage {
